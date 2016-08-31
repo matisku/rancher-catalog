@@ -1,0 +1,4 @@
+name: "Cassandra"
+description: "Distributed Database"
+version: 3.3-rancher1
+category: Databases

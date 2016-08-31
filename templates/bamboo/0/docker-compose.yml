@@ -1,0 +1,51 @@
+bamboo-data:
+    image: busybox
+    tty: true
+    volumes:
+        - /home/bamboo
+
+bamboo-server:
+    image: hwuethrich/bamboo-server
+    ports:
+        - ${http_port}:8085
+        - ${agent_port}:54663
+    links:
+        - postgres:${postgress_container}
+    environment:
+        http_proxy: ${http_proxy}
+        https_proxy: ${https_proxy}
+        BAMBOO_VERSION: ${bamboo_version}
+    labels:
+        io.rancher.sidekicks: bamboo-data
+    volumes_from:
+        - bamboo-data
+
+postgres-data:
+    image: busybox
+    tty: true
+    volumes:
+        - ${postgres_data}
+
+postgres:
+    image: postgres:latest
+    ports:
+        - ${postgress_port}:5432
+    environment:
+        PGDATA: ${postgres_data}
+        POSTGRES_DB: ${postgres_db}
+        POSTGRES_USER: ${postgres_user}
+        POSTGRES_PASSWORD: ${postgres_password}
+    tty: true
+    stdin_open: true
+    labels:
+        io.rancher.sidekicks: postgres-data
+    volumes_from:
+        - postgres-data
+
+bamboo-agent:
+    image: atlassian/bamboo-base-agent
+    links:
+        - bamboo-server:bamboo-server
+    environment:
+        BAMBOO_SERVER: http://bamboo-server:${agent_port}/bamboo
+
