@@ -1,0 +1,38 @@
+owncloud-data:
+    image: busybox
+    tty: true
+    volumes:
+        - /var/www/html/apps
+        - /var/www/html/config
+        - /var/www/html/data
+
+owncloud-server:
+    image: owncloud:${version}
+    ports:
+        - ${http_port}:80
+    links:
+        - mysql:mysql
+    labels:
+        io.rancher.sidekicks: owncloud-data
+    volumes_from:
+        - owncloud-data        
+
+mysql-data:
+    image: busybox
+    tty: true
+    volumes:
+        - /var/lib/mysql
+
+mysql:
+    image: mariadb
+    ports:
+        - ${mysql_port}:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: ${mysql_root_password}
+    tty: true
+    stdin_open: true
+    labels:
+        io.rancher.sidekicks: mysql-data
+    volumes_from:
+        - mysql-data
+

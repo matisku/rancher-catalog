@@ -1,0 +1,31 @@
+.catalog:
+  name: "ownCloud"
+  version: "v0.0.1"
+  description: "ownCloud Server"
+  uuid: owncloud-0
+  minimum_rancher_version: v0.51.0
+  questions:
+    - variable: version
+      description: "ownCloud version to install"
+      label: "ownCloud version"
+      required: true
+      default: "8.1"
+      type: "string"
+    - variable: http_port
+      description: "HTTP port to access ownCloud UI"
+      label: "ownCloud HTTP Port"
+      required: true
+      default: "8083"
+      type: "int"
+    - variable: mysql_port
+      description: "Port for MySQL"
+      label: "MySQL Port"
+      required: true
+      default: "3306"
+      type: "int"
+    - variable: mysql_root_password
+      description: "MySQL Root Password"
+      label: "MySQL Root Password"
+      required: true
+      default: "example"
+      type: "string"

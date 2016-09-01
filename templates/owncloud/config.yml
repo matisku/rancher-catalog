@@ -1,0 +1,5 @@
+name: ownCloud
+description: |
+  osTicket - a self-hosted file sync and share server.
+version: v0.0.1
+category: Cloud
