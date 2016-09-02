@@ -1,6 +1,16 @@
 # Rancher Custom Catalog 
 
-This catalog provides templates created by Mateusz Trojak.
+This catalog provides templates created by Mateusz Trojak.  
+
+## Stacks
+* Bamboo
+* Grafana
+* Joomla
+* Netdata
+* otTicket
+* ownCloud
+* Selenium Grid
+* TeamCity
 
 # License
 Copyright (c) 2014-2016 [Rancher Labs, Inc.](http://rancher.com)
