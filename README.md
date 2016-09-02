@@ -1,3 +1,5 @@
+[![Build Status](https://drone.io/github.com/matisku/rancher-catalog/status.png)](https://drone.io/github.com/matisku/rancher-catalog/latest)
+
 # Rancher Custom Catalog 
 
 This catalog provides templates created by Mateusz Trojak.  
