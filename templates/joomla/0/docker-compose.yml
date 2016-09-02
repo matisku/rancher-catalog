@@ -39,3 +39,13 @@ mysql:
     volumes_from:
         - mysql-data
 
+pma:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: ${mysql_root_password}
+      PHP_UPLOAD_MAX_FILESIZE: 1G
+      PHP_MAX_INPUT_VARS: 1G
+    ports:
+     - ${pma_port}:80
