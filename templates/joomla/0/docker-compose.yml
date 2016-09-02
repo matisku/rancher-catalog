@@ -1,0 +1,41 @@
+joomla-data:
+    image: busybox
+    tty: true
+    volumes:
+        - /var/www/html/
+
+joomla:
+    image: joomla
+    ports:
+        - ${http_port}:80
+    links:
+        - mysql:mysql
+    environment:
+        JOOMLA_DB_HOST: mysql:3306
+        JOOMLA_DB_USER: root
+        JOOMLA_DB_PASSWORD: ${mysql_root_password}
+        JOOMLA_DB_NAME: joomla
+    labels:
+        io.rancher.sidekicks: joomla-data
+    volumes_from:
+        - joomla-data        
+
+mysql-data:
+    image: busybox
+    tty: true
+    volumes:
+        - /var/lib/mysql
+
+mysql:
+    image: mariadb
+    ports:
+        - ${mysql_port}:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: ${mysql_root_password}
+    tty: true
+    stdin_open: true
+    labels:
+        io.rancher.sidekicks: mysql-data
+    volumes_from:
+        - mysql-data
+

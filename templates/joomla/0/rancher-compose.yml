@@ -1,0 +1,25 @@
+.catalog:
+  name: "Joomla"
+  version: "v0.0.1"
+  description: "Joomla CMS"
+  uuid: joomla-0
+  minimum_rancher_version: v0.51.0
+  questions:
+    - variable: http_port
+      description: "HTTP port to access Joomla UI"
+      label: "Joomla HTTP Port"
+      required: true
+      default: "8084"
+      type: "int"
+    - variable: mysql_port
+      description: "Port for MySQL"
+      label: "MySQL Port"
+      required: true
+      default: "3308"
+      type: "int"
+    - variable: mysql_root_password
+      description: "MySQL Root Password"
+      label: "MySQL Root Password"
+      required: true
+      default: "joomla"
+      type: "string"
