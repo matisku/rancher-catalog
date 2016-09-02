@@ -1,6 +1,18 @@
+[![Build Status](https://drone.io/github.com/matisku/rancher-catalog/status.png)](https://drone.io/github.com/matisku/rancher-catalog/latest) [![Code Climate](https://codeclimate.com/github/matisku/rancher-catalog/badges/gpa.svg)](https://codeclimate.com/github/matisku/rancher-catalog)
+
 # Rancher Custom Catalog 
 
-This catalog provides templates created by Mateusz Trojak.
+This catalog provides templates created by Mateusz Trojak.  
+
+## Stacks
+* Bamboo
+* Grafana
+* Joomla
+* Netdata
+* otTicket
+* ownCloud
+* Selenium Grid
+* TeamCity
 
 # License
 Copyright (c) 2014-2016 [Rancher Labs, Inc.](http://rancher.com)
