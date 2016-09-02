@@ -3,7 +3,7 @@
 * MariaDB Database + Sidekick with storage
 
 ## Info
-* In default ownCloud stack will create "owncloud" MySQL database with owncloud user.
+* In default ownCloud stack will create "owncloud" MySQL database with root user.
 * Once ownCloud will start, make sure you setup correct information in setup page.
 
 ## First Run
