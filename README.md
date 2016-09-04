@@ -6,6 +6,7 @@ This catalog provides templates created by Mateusz Trojak.
 
 ## Stacks
 * Bamboo
+* Drupal
 * Grafana
 * Joomla
 * Netdata
