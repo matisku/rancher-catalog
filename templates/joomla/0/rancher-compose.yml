@@ -29,3 +29,15 @@
       required: true
       default: "joomla"
       type: "string"
+    - variable: http_proxy
+      description: "In case you are at corporate network, setup http_proxy variable"
+      label: "http_proxy"
+      required: false
+      default: ""
+      type: "string"
+    - variable: https_proxy
+      description: "In case you are at corporate network, setup https_proxy variable"
+      label: "https_proxy"
+      required: false
+      default: ""
+      type: "string"
