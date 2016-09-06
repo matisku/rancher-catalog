@@ -1,0 +1,5 @@
+name: Gogs
+description: |
+  Go Git Service - a painless self-hosted Git service (this time done right).
+version: v0.0.1
+category: Version Control

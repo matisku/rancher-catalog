@@ -1,0 +1,49 @@
+gogs-data:
+    image: busybox
+    tty: true
+    volumes:
+        - /data
+
+gogs:
+    image: gogs/gogs
+    ports:
+        - ${ssh_port}:22
+        - ${http_port}:3000
+    links:
+        - ${mysql_host}:mysql
+    environment:
+        http_proxy: ${http_proxy}
+        https_proxy: ${https_proxy}
+    labels:
+        io.rancher.sidekicks: gogs-data
+    volumes_from:
+        - gogs-data
+
+mysql-data:
+    image: busybox
+    tty: true
+    volumes:
+        - /var/lib/mysql
+
+mysql:
+    image: mariadb
+    environment:
+        MYSQL_ROOT_PASSWORD: ${mysql_root_password}
+        MYSQL_DATABASE: ${mysql_database}
+    tty: true
+    stdin_open: true
+    labels:
+        io.rancher.sidekicks: mysql-data
+    volumes_from:
+        - mysql-data
+
+pma:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: ${mysql_root_password}
+      PHP_UPLOAD_MAX_FILESIZE: 1G
+      PHP_MAX_INPUT_VARS: 1G
+    ports:
+     - ${pma_port}:80

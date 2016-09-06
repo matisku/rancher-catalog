@@ -1,0 +1,50 @@
+.catalog:
+  name: "Gogs"
+  version: "v0.0.1"
+  description: "Gogs"
+  uuid: gogs-0
+  minimum_rancher_version: v0.51.0
+  questions:
+    - variable: http_port
+      description: "HTTP port to access Gogs UI"
+      label: "Gogs HTTP Port"
+      required: true
+      default: "3000"
+      type: "int"
+    - variable: pma_port
+      description: "Port for PHPMyAdmin"
+      label: "PMA Port"
+      required: true
+      default: "8081"
+      type: "int"
+    - variable: ssh_port
+      description: "SSH Port"
+      label: "SSH port to access gogs cli"
+      required: true
+      default: "222"
+      type: "int"
+    - variable: mysql_root_password
+      description: "MySQL Root Password"
+      label: "MySQL Root Password"
+      required: true
+      default: "secret"
+      type: "string"
+    - variable: mysql_database
+      description: "MySQL database"
+      label: "Mysql Database"
+      required: true
+      default: "gogs"
+      type: "string"
+    - variable: http_proxy
+      description: "In case you are at corporate network, setup http_proxy variable"
+      label: "http_proxy"
+      required: false
+      default: ""
+      type: "string"
+    - variable: https_proxy
+      description: "In case you are at corporate network, setup https_proxy variable"
+      label: "https_proxy"
+      required: false
+      default: ""
+      type: "string"
+
