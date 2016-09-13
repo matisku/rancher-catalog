@@ -18,13 +18,25 @@
       required: true
       default: "abhisant-druid-datasource,alexanderzobnin-zabbix-app,bosun-app,bosun-datasource,crate-datasource,fastweb-openfalcon-datasource,fetzerch-sunandmoon-datasource,grafana-clock-panel,grafana-example-app,grafana-influxdb-08-datasource,grafana-kairosdb-datasource,grafana-piechart-panel,grafana-simple-json-datasource,grafana-worldmap-panel,kentik-app,mtanda-heatmap-epoch-panel,mtanda-histogram-panel,ns1-app,opennms-datasource,percona-percona-app,praj-ams-datasource,raintank-snap-app,raintank-worldping-app,sileht-gnocchi-datasource,sraoss-sunburst-panel,stagemonitor-elasticsearch-app,udoprog-heroic-datasource,voxter-app"
       type: "string"
-    - variable: influx_ui
+    - variable: telegraf_hostname
+      description: "Telegraf hostname. This will be show in a Grafana Dashboards."
+      label: "Telegraf Hostname"
+      required: true
+      default: "telegraf"
+      type: "string"
+    - variable: influx_db
+      description: "InfluxDB Database"
+      label: "InfluxDB Database"
+      required: true
+      default: "telegraf"
+      type: "string"
+    - variable: influx_ui_port
       description: "Port to access InfluxDB UI"
       label: "InfluxDB UI"
       required: true
       default: "8083"
       type: "string"
-    - variable: influx_db
+    - variable: influx_db_port
       description: "Port to access InfluxDB DB"
       label: "InfluxDB DB"
       required: true

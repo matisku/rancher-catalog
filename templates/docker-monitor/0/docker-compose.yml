@@ -33,10 +33,10 @@ grafana-data:
 influxdb:
     image: matisq/influxdb:latest
     ports:
-        - ${influx_ui}:8083
-        - ${influx_db}:8086
+        - ${influx_ui_port}:8083
+        - ${influx_db_port}:8086
     environment:
-        INFLUX_DATABASE: "telegraf"
+        INFLUX_DATABASE: ${influx_db}
         INLFUX_ADMIN_USER: "grafana"
         INFLUX_ADMIN_PASS: "grafana"
     labels:
@@ -55,10 +55,10 @@ telegraf:
     links:
         - influxdb:influxdb
     environment:
-        HOST_NAME: "telegraf"
+        HOST_NAME: ${telegraf_hostname}
         INFLUXDB_HOST: "influxdb"
         INFLUXDB_PORT: "8086"
-        DATABASE: "telegraf"
+        DATABASE: ${influx_db}
     tty: true
     volumes:
         - /var/run/docker.sock:/var/run/docker.sock
