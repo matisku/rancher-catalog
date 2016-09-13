@@ -4,6 +4,7 @@
   description: |
       (Experimental) Telegraf, InfluxDB, Grafana Docker Monitoring
   uuid: dockermonitor-0
+  maintainer: "Mateusz Trojak <matisq@op.pl>"
   minimum_rancher_version: v0.51.0
   questions:
     - variable: grafana_port

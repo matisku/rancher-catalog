@@ -5,7 +5,8 @@
 This catalog provides templates created by Mateusz Trojak.  
 
 ## Stacks
-* Bamboo
+* (Experimental) Bamboo
+* (Experimental) Docker Monitor - based on Telegraf, InfluxDB and Grafana
 * Drupal
 * Gogs
 * Grafana
@@ -13,7 +14,7 @@ This catalog provides templates created by Mateusz Trojak.
 * Netdata
 * otTicket
 * ownCloud
-* Selenium Grid
+* (Experimental) Selenium Grid
 * TeamCity
 
 # License
