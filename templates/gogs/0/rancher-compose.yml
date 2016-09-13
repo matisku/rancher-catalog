@@ -23,6 +23,12 @@
       required: true
       default: "222"
       type: "int"
+    - variable: mysql_host
+      description: "MySQL Host Name"
+      label: "MySQL Host"
+      required: true
+      default: "mysql"
+      type: "string"
     - variable: mysql_root_password
       description: "MySQL Root Password"
       label: "MySQL Root Password"
