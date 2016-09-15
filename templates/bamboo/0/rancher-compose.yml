@@ -1,7 +1,7 @@
 .catalog:
   name: "Bamboo"
   version: "v0.0.1"
-  description: "TeamCity Server"
+  description: "Bambo Server"
   uuid: bamboo-0
   minimum_rancher_version: v0.51.0
   questions:
@@ -18,7 +18,7 @@
       default: "8085"
       type: "int"
     - variable: agent_port
-      description: "HTTP port to connect Bamboo Agents"
+      description: "HTTP port to connect Bamboo Agents. Can be useful when connecting agents out of Rancher."
       label: "Agent HTTP Port"
       required: true
       default: "54663"
@@ -29,24 +29,12 @@
       required: true
       default: "1"
       type: "int"
-    - variable: postgress_container
-      description: "Define a linked postgress container name"
-      label: "Postgres Container"
-      required: true
-      default: "bamboo-db"
-      type: "string"
     - variable: postgress_port
       description: "Port for Postgres"
       label: "Postgres Port"
       required: true
       default: "5432"
       type: "int"
-    - variable: postgres_data
-      description: "Postgres Data Folder"
-      label: "Postgres Data"
-      required: true
-      default: "/var/lib/postgresql/data/pgdata"
-      type: "string"
     - variable: postgres_db
       description: "Postgres Database"
       label: "Postgres Database"
@@ -81,4 +69,3 @@
 bamboo-agent:
   scale: ${scale}
   retain_ip: true
-  
