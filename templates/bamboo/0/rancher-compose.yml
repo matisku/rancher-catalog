@@ -29,6 +29,12 @@
       required: true
       default: "1"
       type: "int"
+    - variable: packages
+      description: "List of additional packages which should be installed on Bamboo Agent. Put pakcages separated with space."
+      label: "(EXPERIMENTAL) Packages to install on Agent."
+      required: false
+      default: ""
+      type: "string"
     - variable: postgress_port
       description: "Port for Postgres"
       label: "Postgres Port"
