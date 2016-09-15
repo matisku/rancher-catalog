@@ -5,7 +5,7 @@ bamboo-data:
         - /home/bamboo
 
 bamboo-server:
-    image: matisq/bamboo-server
+    image: matisq/bamboo-server:latest
     ports:
         - ${http_port}:8085
         - ${agent_port}:54663
@@ -44,7 +44,7 @@ postgres:
         - postgres-data
 
 bamboo-agent:
-    image: matisq/bamboo-agent
+    image: matisq/bamboo-agent:latest
     links:
         - bamboo-server:bamboo-server
     environment:
