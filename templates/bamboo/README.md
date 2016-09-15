@@ -1,6 +1,6 @@
 ## What is inside Bamboo Stack?
-* Bamboo Server
-* Postgres Database
+* Bamboo Server + Sidekick with volume data
+* Postgres Database + Sidekick with volume data
 * Scalable Bamboo Agents
 
 ## Info
