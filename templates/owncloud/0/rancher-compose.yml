@@ -9,7 +9,7 @@
       description: "ownCloud version to install"
       label: "ownCloud version"
       required: true
-      default: "8.1"
+      default: "9.1"
       type: "string"
     - variable: http_port
       description: "HTTP port to access ownCloud UI"
