@@ -4,8 +4,8 @@ machine:
 
 dependencies:
   pre:
-    - sudo mkdir -p ${scratch}
+    - mkdir -p ${scratch}
     
 test:
   override:
-    - sudo scripts/ci
+    - scripts/ci
