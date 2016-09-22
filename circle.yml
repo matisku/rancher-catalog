@@ -1,0 +1,11 @@
+machine:
+  environment:
+    scratch: /scratch/integration
+
+dependencies:
+  pre:
+    - sudo mkdir -p ${scratch}
+    
+test:
+  override:
+    - sudo scripts/ci
