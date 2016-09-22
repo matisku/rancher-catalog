@@ -5,6 +5,7 @@ machine:
 dependencies:
   pre:
     - sudo mkdir -p ${scratch}
+    - python --version
     
 test:
   override:
