@@ -1,4 +1,4 @@
-[![Build Status](https://drone.io/github.com/matisku/rancher-catalog/status.png)](https://drone.io/github.com/matisku/rancher-catalog/latest) [![Code Climate](https://codeclimate.com/github/matisku/rancher-catalog/badges/gpa.svg)](https://codeclimate.com/github/matisku/rancher-catalog)
+[![CircleCI](https://circleci.com/gh/matisku/rancher-catalog.svg?style=svg)](https://circleci.com/gh/matisku/rancher-catalog) [![Build Status](https://drone.io/github.com/matisku/rancher-catalog/status.png)](https://drone.io/github.com/matisku/rancher-catalog/latest)  [![Code Climate](https://codeclimate.com/github/matisku/rancher-catalog/badges/gpa.svg)](https://codeclimate.com/github/matisku/rancher-catalog)
 
 # Rancher Custom Catalog 
 
