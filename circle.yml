@@ -9,3 +9,4 @@ dependencies:
 test:
   override:
     - sudo -H scripts/ci
+    - cat /scratch/integration/.tox/flake8/log/flake8-1.log
