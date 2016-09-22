@@ -1,6 +1,6 @@
 machine:
   python:
-    version: 3.5.2
+    version: 2.7.12
   environment:
     scratch: /scratch/integration
 
@@ -12,4 +12,3 @@ dependencies:
 test:
   override:
     - sudo -H scripts/ci
-    - cat /scratch/integration/.tox/flake8/log/flake8-1.log
