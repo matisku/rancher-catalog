@@ -1,7 +1,7 @@
 ## What is inside Bamboo Stack?
-* Bamboo Server + Sidekick with volume data
+* [Bamboo Server](https://hub.docker.com/r/matisq/bamboo-server/) + Sidekick with volume data
 * Postgres Database + Sidekick with volume data
-* Scalable Bamboo Agents
+* [Scalable Bamboo Agents](https://hub.docker.com/r/matisq/bamboo-agent/)
 
 ## Info
 * In default Bamboo stack will create "bamboo" postgres database with bamboo user.  
