@@ -9,7 +9,7 @@
       description: "Version of Bamboo Server. Check https://www.atlassian.com/software/bamboo/download?os=linux for current version."
       label: "Bamboo Version"
       required: true
-      default: "5.13.0.1"
+      default: "5.13.1"
       type: "string"
     - variable: http_port
       description: "HTTP port to access Bamboo Server UI"
