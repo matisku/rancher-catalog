@@ -60,7 +60,7 @@ def client():
 @pytest.fixture(scope='session')
 def templates(client):
     templates = client.list_template()
-    assert len(templates) > 0
+    assert len(templates) >= 0
     return templates
 
 
