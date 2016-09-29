@@ -48,4 +48,4 @@ pma:
     ports:
      - ${pma_port}:80
     depends_on:
-      - mysql
+     - mysql
