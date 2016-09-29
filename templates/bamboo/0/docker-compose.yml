@@ -10,7 +10,7 @@ bamboo-server:
         - ${http_port}:8085
         - ${agent_port}:54663
     links:
-        - postgres:postgres
+        - postgres
     environment:
         http_proxy: ${http_proxy}
         https_proxy: ${https_proxy}
@@ -46,7 +46,7 @@ postgres:
 bamboo-agent:
     image: matisq/bamboo-agent:latest
     links:
-        - bamboo-server:bamboo-server
+        - bamboo-server
     environment:
         http_proxy: ${http_proxy}
         https_proxy: ${https_proxy}
