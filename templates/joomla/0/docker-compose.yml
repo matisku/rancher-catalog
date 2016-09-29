@@ -9,7 +9,7 @@ joomla:
     ports:
         - ${http_port}:80
     links:
-        - mysql:mysql
+        - mysql
     environment:
         JOOMLA_DB_HOST: mysql:3306
         JOOMLA_DB_USER: root
@@ -51,3 +51,5 @@ pma:
       PHP_MAX_INPUT_VARS: 1G
     ports:
      - ${pma_port}:80
+    depends_on:
+     - mysql
