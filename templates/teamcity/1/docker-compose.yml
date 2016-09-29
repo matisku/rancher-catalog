@@ -43,6 +43,6 @@ postgres:
 teamcity-agent:
     image: sjoerdmulder/teamcity-agent:latest
     links:
-        - teamcity-server:teamcity-server
+        - teamcity-server
     environment:
         TEAMCITY_SERVER: http://teamcity-server:8111
