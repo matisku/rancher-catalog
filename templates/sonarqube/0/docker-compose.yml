@@ -9,7 +9,7 @@ sonarqube:
     ports:
         - ${http_port}:9000
     links:
-        - postgres:postgres
+        - postgres
     environment:
         http_proxy: ${http_proxy}
         https_proxy: ${https_proxy}
