@@ -10,7 +10,7 @@ gogs:
         - ${ssh_port}:22
         - ${http_port}:3000
     links:
-        - ${mysql_host}:mysql
+        - mysql:${mysql_host}
     environment:
         http_proxy: ${http_proxy}
         https_proxy: ${https_proxy}
@@ -47,3 +47,5 @@ pma:
       PHP_MAX_INPUT_VARS: 1G
     ports:
      - ${pma_port}:80
+    depends_on:
+      - mysql
