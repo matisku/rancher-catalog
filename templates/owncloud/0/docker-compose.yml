@@ -11,7 +11,7 @@ owncloud-server:
     ports:
         - ${http_port}:80
     links:
-        - mysql:mysql
+        - mysql
     labels:
         io.rancher.sidekicks: owncloud-data
     volumes_from:
