@@ -1,5 +1,5 @@
 name: Drone
 description: |
     Drone CI Server
-version: 0.4-rancher3
+version: v0.0.1
 category: Continuous Integration
