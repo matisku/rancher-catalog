@@ -16,7 +16,7 @@
         - gitlab
         - gogs
     - variable: remote_config
-      type: "password"
+      type: "string"
       required: true
       label: "Remote Config"
       description: "Must be the full connection string. see http://readme.drone.io/setup/overview/ for more info"
@@ -60,7 +60,7 @@ drone-server:
     remote_driver: ${remote_driver}
     remote_config: "${remote_config}"
     database_driver: mysql
-    database_config: "mysql"
+    database_config: "${database_config}"
     http_proxy_on: "false"
     debug: "true"
   health_check:
