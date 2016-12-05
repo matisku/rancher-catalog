@@ -47,5 +47,3 @@ pma:
       PHP_MAX_INPUT_VARS: 1G
     ports:
      - ${pma_port}:80
-    depends_on:
-     - mysql
