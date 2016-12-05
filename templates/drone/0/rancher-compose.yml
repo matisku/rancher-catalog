@@ -26,12 +26,6 @@
       default: "9999"
       label: "Public Port"
       description: "Port that the load balancer will listen on. Must be accessible to remote driver for webhooks"
-    - variable: database_driver
-      type: "string"
-      label: "Database Driver"
-      description: "Database backend to use."
-      required: true
-      default: "mysql"
     - variable: database_config
       label: "Database Config"
       type: "string"
@@ -48,7 +42,7 @@
       description: "MySQL database"
       label: "Mysql Database"
       required: true
-      default: "drone-ci"
+      default: "drone"
       type: "string"
 drone-lb:
   scale: 1
@@ -65,8 +59,8 @@ drone-server:
   metadata:
     remote_driver: ${remote_driver}
     remote_config: "${remote_config}"
-    database_driver: ${database_driver}
-    database_config: "${database_config}"
+    database_driver: mysql
+    database_config: "mysql"
     http_proxy_on: "false"
     debug: "true"
   health_check:
