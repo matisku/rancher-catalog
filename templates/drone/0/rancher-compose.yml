@@ -1,8 +1,7 @@
 .catalog:
   name: Drone
   version: "v0.0.1"
-  description: |
-    Drone CI Server
+  description: "Drone CI Server"
   uuid: droneci-0
   minimum_rancher_version: v0.51.0
   questions:
@@ -50,7 +49,7 @@
       label: "Mysql Database"
       required: true
       default: "drone-ci"
-      type: "string
+      type: "string"
 drone-lb:
   scale: 1
   load_balancer_config:
