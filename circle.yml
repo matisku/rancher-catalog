@@ -10,7 +10,6 @@ dependencies:
     - sudo apt-get upgrade
     - sudo apt-get -y install python-dev
     - sudo mkdir -p ${scratch}
-    - python --version
     
 test:
   override:
