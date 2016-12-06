@@ -1,0 +1,5 @@
+name: Drone
+description: |
+    Drone CI Server
+version: v0.0.1
+category: Continuous Integration
