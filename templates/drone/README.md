@@ -2,7 +2,7 @@
 
 ### Info:
 
-This template creates an instance of Drone CI server 0.4.
+This template creates an instance of Drone CI server 0.4
 
 ### Usage:
 
