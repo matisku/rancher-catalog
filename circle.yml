@@ -7,9 +7,10 @@ machine:
 dependencies:
   pre:
     - sudo apt-get update
-    - sudo apt-get -y install python-dev
+    - sudo apt-get -y install python-dev ruby
     - sudo mkdir -p ${scratch}
     
 test:
   override:
+    - ls templates/*/*/docker*.yml | xargs -t -I{} ruby -e "require 'yaml';puts YAML.load_file('./{}')"
     - sudo -H scripts/ci
