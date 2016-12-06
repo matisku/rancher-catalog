@@ -7,6 +7,7 @@ This catalog provides templates created by Mateusz Trojak.
 ## Stacks
 * [Bamboo](https://github.com/matisku/bamboo-docker)
 * (Experimental) [Docker Monitor] (https://github.com/matisku/tig-stack)- based on Telegraf, InfluxDB and Grafana
+* DroneCI
 * Drupal
 * Gogs
 * Grafana
