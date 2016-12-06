@@ -1,13 +1,15 @@
 machine:
   python:
     version: 2.7.12
+  ruby:
+    version: rbx-2.2.6
   environment:
     scratch: /scratch/integration
 
 dependencies:
   pre:
     - sudo apt-get update
-    - sudo apt-get -y install python-dev ruby
+    - sudo apt-get -y install python-dev
     - sudo mkdir -p ${scratch}
     
 test:
