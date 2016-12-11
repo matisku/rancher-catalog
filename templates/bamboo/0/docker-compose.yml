@@ -1,6 +1,8 @@
 bamboo-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /home/bamboo
 
@@ -23,7 +25,9 @@ bamboo-server:
 
 postgres-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /var/lib/postgresql/data/pgdata
 

@@ -1,6 +1,8 @@
 sonarqube-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /opt/sonarqube/extensions/plugins
 
@@ -23,7 +25,9 @@ sonarqube:
 
 postgres-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - ${postgres_data}
 

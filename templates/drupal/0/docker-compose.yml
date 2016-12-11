@@ -1,6 +1,8 @@
 drupal-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /var/www/html/modules
 
@@ -24,7 +26,9 @@ drupal:
 
 mysql-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /var/lib/mysql
 

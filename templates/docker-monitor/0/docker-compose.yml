@@ -24,7 +24,9 @@ grafana:
 
 grafana-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /var/lib/grafana
         - /var/log/grafana
@@ -46,7 +48,9 @@ influxdb:
 
 influxdb-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /var/lib/influxdb
 
