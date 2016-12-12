@@ -1,6 +1,8 @@
 teamcity-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - /var/lib/teamcity
 
@@ -20,7 +22,9 @@ teamcity-server:
 
 postgres-data:
     image: busybox
-    tty: true
+    net: none
+    labels:
+      io.rancher.container.start_once: true
     volumes:
         - ${postgres_data}
 
