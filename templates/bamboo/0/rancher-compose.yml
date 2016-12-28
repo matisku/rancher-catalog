@@ -1,6 +1,6 @@
 .catalog:
   name: "Bamboo"
-  version: "v0.0.1"
+  version: "v0.0.2"
   description: "Bambo Server"
   uuid: bamboo-0
   minimum_rancher_version: v0.51.0
@@ -75,3 +75,21 @@
 bamboo-agent:
   scale: ${scale}
   retain_ip: true
+
+version: '2'
+services:
+  bamboo-lb:
+    scale: 1
+    lb_config:
+      port_rules:
+      - source_port: http_port
+        target_port: 8085
+        service: bamboo-server
+    health_check:
+      port: 42
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000
+  bamboo-server:
+    scale: 1
