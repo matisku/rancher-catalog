@@ -64,7 +64,7 @@ services:
   teamcity-server:
     scale: 1
     health_check:
-      port: 8085
+      port: 8111
       interval: 2000
       unhealthy_threshold: 3
       healthy_threshold: 2
