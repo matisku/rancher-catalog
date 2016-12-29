@@ -17,12 +17,6 @@
       required: true
       default: 1
       type: "int"
-    - variable: postgress_container
-      description: "Define a linked postgress container name"
-      label: "Postgres Container"
-      required: true
-      default: "db"
-      type: "string"
     - variable: postgres_db
       description: "Postgres Database"
       label: "Postgres Database"
