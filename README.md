@@ -15,6 +15,7 @@ This catalog provides templates created by Mateusz Trojak.
 * Netdata
 * otTicket
 * ownCloud
+* PostgreSQL
 * (Experimental) Selenium Grid
 * TeamCity
 
