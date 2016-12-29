@@ -16,6 +16,9 @@ services:
 
   teamcity-server:
     image: sjoerdmulder/teamcity:latest
+    hostname: teamcity-server
+    extra_hosts:
+      - "teamcity-server:127.0.0.1"
     links:
       - postgres
     environment:
