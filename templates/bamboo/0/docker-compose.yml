@@ -13,7 +13,7 @@ services:
       io.rancher.container.start_once: true
     volumes:
       - /home/bamboo
-    net: none
+    network_mode: "none"
 
   bamboo-server:
     image: matisq/bamboo-server:5.15.3
@@ -38,7 +38,7 @@ services:
       io.rancher.container.start_once: true
     volumes:
       - /var/lib/postgresql/data/pgdata
-    net: none
+    network_mode: "none"
 
   postgres:
     image: postgres:9.6
