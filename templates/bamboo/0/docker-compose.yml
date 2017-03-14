@@ -8,12 +8,12 @@ services:
       - ${lb_http_port}:8085
 
   bamboo-data:
-    net: none
     image: busybox
     labels:
       io.rancher.container.start_once: true
     volumes:
       - /home/bamboo
+    net: none
 
   bamboo-server:
     image: matisq/bamboo-server:5.15.3
@@ -33,12 +33,12 @@ services:
       - bamboo-data
 
   postgres-data:
-    net: none
     image: busybox
     labels:
       io.rancher.container.start_once: true
     volumes:
       - /var/lib/postgresql/data/pgdata
+    net: none
 
   postgres:
     image: postgres:9.6
