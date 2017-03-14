@@ -8,6 +8,7 @@ services:
       - ${lb_http_port}:8085
 
   bamboo-data:
+    net: none
     image: busybox
     labels:
       io.rancher.container.start_once: true
@@ -15,7 +16,7 @@ services:
       - /home/bamboo
 
   bamboo-server:
-    image: matisq/bamboo-server:latest
+    image: matisq/bamboo-server:5.15.3
     hostname: bamboo-server
     extra_hosts:
       - "bamboo-server:127.0.0.1"
@@ -32,6 +33,7 @@ services:
       - bamboo-data
 
   postgres-data:
+    net: none
     image: busybox
     labels:
       io.rancher.container.start_once: true
@@ -39,7 +41,7 @@ services:
       - /var/lib/postgresql/data/pgdata
 
   postgres:
-    image: postgres:latest
+    image: postgres:9.6
     environment:
       PGDATA: /var/lib/postgresql/data/pgdata
       POSTGRES_DB: ${postgres_db}
@@ -53,7 +55,7 @@ services:
       - postgres-data
 
   bamboo-agent:
-    image: matisq/bamboo-agent:latest
+    image: matisq/bamboo-agent:5.15.3
     links:
       - bamboo-server
     environment:
