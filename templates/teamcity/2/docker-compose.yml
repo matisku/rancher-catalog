@@ -53,7 +53,7 @@ services:
       - postgres-data
 
   teamcity-agent:
-    image: sjoerdmulder/teamcity-agent:${teamcity_version}
+    image: sjoerdmulder/teamcity-agent:latest
     links:
       - teamcity-server
     environment:
