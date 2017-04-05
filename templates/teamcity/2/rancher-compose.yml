@@ -12,7 +12,7 @@
       default: 8111
       type: "int"
     - variable: teamcity_version
-      description: "TeamCity version. Check https://hub.docker.com/r/jetbrains/teamcity-server/tags/ for list of available versions."
+      description: "TeamCity version. Check https://hub.docker.com/r/sjoerdmulder/teamcity/tags/ for list of available versions."
       label: "TeamCity Version."
       required: true
       default: "latest"
