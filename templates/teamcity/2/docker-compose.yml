@@ -8,6 +8,7 @@ services:
       - ${lb_http_port}:8111
 
   teamcity-data:
+    network_mode: none
     image: busybox
     labels:
       io.rancher.container.start_once: true
@@ -15,7 +16,7 @@ services:
       - /var/lib/teamcity
 
   teamcity-server:
-    image: sjoerdmulder/teamcity:latest
+    image: sjoerdmulder/teamcity:${teamcity_version}
     hostname: teamcity-server
     extra_hosts:
       - "teamcity-server:127.0.0.1"
@@ -30,6 +31,7 @@ services:
       - teamcity-data        
 
   postgres-data:
+    network_mode: none
     image: busybox
     labels:
       io.rancher.container.start_once: true
@@ -37,7 +39,7 @@ services:
       - /var/lib/postgresql/data/pgdata
 
   postgres:
-    image: postgres:latest
+    image: postgres:9.6
     environment:
       PGDATA: /var/lib/postgresql/data/pgdata
       POSTGRES_DB: ${postgres_db}
@@ -51,7 +53,7 @@ services:
       - postgres-data
 
   teamcity-agent:
-    image: sjoerdmulder/teamcity-agent:latest
+    image: sjoerdmulder/teamcity-agent:${teamcity_version}
     links:
       - teamcity-server
     environment:
