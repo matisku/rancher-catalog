@@ -1,7 +1,7 @@
 .catalog:
   name: "JIRA"
   version: "v0.0.1"
-  description: "Bambo JIRA"
+  description: "JIRA Server"
   uuid: jira-0
   minimum_rancher_version: v1.2.0
   questions:
@@ -63,8 +63,10 @@ services:
   jira-server:
     scale: 1
     health_check:
-      port: 8085
-      interval: 2000
-      unhealthy_threshold: 3
+      port: 8080
+      interval: 5000
+      initializing_timeout: 60000
+      unhealthy_threshold: 5
+      strategy: none
       healthy_threshold: 2
-      response_timeout: 2000  
+      response_timeout: 5000
