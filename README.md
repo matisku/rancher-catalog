@@ -11,7 +11,7 @@ This catalog provides templates created by Mateusz Trojak.
 * Drupal
 * Gogs
 * Grafana
-* JIRA
+* [JIRA](https://github.com/matisku/jira-docker)
 * Joomla
 * Netdata
 * otTicket
