@@ -11,6 +11,7 @@ This catalog provides templates created by Mateusz Trojak.
 * Drupal
 * Gogs
 * Grafana
+* JIRA
 * Joomla
 * Netdata
 * otTicket
@@ -20,7 +21,7 @@ This catalog provides templates created by Mateusz Trojak.
 * TeamCity
 
 # License
-Copyright (c) 2016 Mateusz Trojak
+Copyright (c) 2017 Mateusz Trojak
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
